@@ -1,0 +1,26 @@
+<div class="row" style="margin: 15%; margin-left: 25%; margin-right: 25%;" >
+    <div class="col-xs-12 " >
+
+        <form #authForm="ngForm" (submit)="onSubmit(authForm)">
+
+            <div class="form-group">
+                <label>E-mail</label>
+                <input type="email" id="email" class="form-control" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" name="email" ngModel required />
+            </div>
+            <br>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="password" class="form-control" name="password" ngModel required minlength="8" />
+            </div>
+            <br>
+            <div>
+                <button class="btn btn-primary" [disabled]="authForm.invalid" > {{isLoginMode ? 'Login' : 'Sign Up'}} </button> |
+                <button class="btn btn-primary" type="button" (click)="onSwitchMode()" >Switch to {{isLoginMode ? 'Signup' : 'Login'}}</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<h1>lrmonishkumargmail.com</h1>
+    <p>123456789</p>
+    
